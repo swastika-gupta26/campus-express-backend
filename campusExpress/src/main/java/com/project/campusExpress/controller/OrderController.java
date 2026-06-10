@@ -1,4 +1,4 @@
-package com.project.campusExpress;
+package com.project.campusExpress.controller;
 
 import com.project.campusExpress.entity.Order;
 import com.project.campusExpress.entity.Product;
