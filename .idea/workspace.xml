@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/campusExpress.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.003448092581982" />
+      <entry key="MS500" value="1.411580846671098" />
+      <entry key="S2" value="3.9419033723748096" />
+      <entry key="S5" value="6.554466571055907" />
+      <entry key="S10" value="9.047211845171658" />
+      <entry key="S30" value="14.312316603944751" />
+      <entry key="S60" value="18.656257944163624" />
+      <entry key="M2" value="24.4580430278115" />
+      <entry key="M5" value="32.97455189748982" />
+      <entry key="M10" value="38.48301215533812" />
+      <entry key="M15" value="41.36083339909584" />
+      <entry key="M30" value="46.79484658463404" />
+      <entry key="H1" value="57.36759323720344" />
+      <entry key="H2" value="91.01099415562632" />
+      <entry key="H4" value="195.07926584442862" />
+      <entry key="D1" value="805.6308220162953" />
+      <entry key="W1" value="1128.6192701493824" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="9.834555795386392E-238" />
+      <entry key="S10" value="3.5232421244014574E-119" />
+      <entry key="S30" value="6.150293320760585E-40" />
+      <entry key="S60" value="4.742960053740369E-20" />
+      <entry key="M2" value="4.3861271842640497E-10" />
+      <entry key="M5" value="4.4771841658452344E-4" />
+      <entry key="M10" value="0.04676178387734845" />
+      <entry key="M15" value="0.22711862610549063" />
+      <entry key="M30" value="1.3471331855173683" />
+      <entry key="H1" value="5.016486852509815" />
+      <entry key="H2" value="15.349226882185684" />
+      <entry key="H4" value="39.78962882464894" />
+      <entry key="D1" value="164.31512423144667" />
+      <entry key="W1" value="230.80073919053387" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.06037406112747629" />
+      <entry key="MS500" value="0.7334173205540803" />
+      <entry key="S2" value="3.5508301232710195" />
+      <entry key="S5" value="6.3332020564391405" />
+      <entry key="S10" value="8.896344552989344" />
+      <entry key="S30" value="14.233137567515836" />
+      <entry key="S60" value="18.605999809103118" />
+      <entry key="M2" value="24.42731898870294" />
+      <entry key="M5" value="32.95993891502128" />
+      <entry key="M10" value="38.520597552841195" />
+      <entry key="M15" value="41.57968537712815" />
+      <entry key="M30" value="48.132307006112654" />
+      <entry key="H1" value="62.37068858640244" />
+      <entry key="H2" value="106.34020452718524" />
+      <entry key="H4" value="234.84195670704221" />
+      <entry key="D1" value="969.9271657477263" />
+      <entry key="W1" value="1359.4162583687148" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3ErgSi1k3ywLo1gt5gCX5s8cI1v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CampusExpressApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/riddh/Downloads/campusExpress&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CampusExpressApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="Swariddh2609@" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="JWT_SECRET_KEY" value="CampusExpressSuperSecretKeyWhichIsVeryLongAndSecure123456" />
+      </envs>
+      <module name="campusExpress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.campusExpress.CampusExpressApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="" />
+      <created>1780942103576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780942103576</updated>
+      <workItem from="1780942104809" duration="289000" />
+      <workItem from="1780942426908" duration="456000" />
+      <workItem from="1780983153035" duration="1625000" />
+      <workItem from="1780986430877" duration="14498000" />
+      <workItem from="1781070492620" duration="9048000" />
+      <workItem from="1781092437233" duration="5107000" />
+      <workItem from="1781176181571" duration="23000" />
+      <workItem from="1781190201001" duration="656000" />
+      <workItem from="1781259038696" duration="23000" />
+      <workItem from="1781329966275" duration="3609000" />
+      <workItem from="1781437314784" duration="4378000" />
+      <workItem from="1781445070805" duration="1196000" />
+      <workItem from="1781446320977" duration="3882000" />
+      <workItem from="1781498301864" duration="12525000" />
+      <workItem from="1781522253132" duration="3480000" />
+      <workItem from="1781543633351" duration="120000" />
+      <workItem from="1781543962427" duration="1940000" />
+      <workItem from="1781685883835" duration="2507000" />
+      <workItem from="1781695526635" duration="5777000" />
+      <workItem from="1781717743324" duration="771000" />
+      <workItem from="1781719030274" duration="5502000" />
+      <workItem from="1781769174742" duration="9954000" />
+      <workItem from="1781783847640" duration="2302000" />
+      <workItem from="1781791658672" duration="7095000" />
+      <workItem from="1781848181058" duration="4361000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
