@@ -10,18 +10,24 @@ public class User {
     private Long id;
 
     private String name;
+    @Column(unique = true, nullable = false)
+    private String username;
     private String address;
     private String hostelName;
     private String phoneNumber;
+    @Column(nullable = false)
+    private String password;
+    private String role;
 
     public User() {
     }
 
-    public User(String name, String address, String hostelName, String phoneNumber) {
+    public User(String name, String address, String hostelName, String phoneNumber, String password) {
         this.name = name;
         this.hostelName = hostelName;
         this.phoneNumber = phoneNumber;
         this.address = address;
+        this.password=password;
     }
 
     public Long getId() {
@@ -40,12 +46,20 @@ public class User {
         this.name = name;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
 
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String name) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
@@ -64,6 +78,20 @@ public class User {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password =password;
+    }
+
+    public String getRole(){
+        return role;
+    }
+    public void setRole(String role){
+        this.role=role;
     }
 }
 

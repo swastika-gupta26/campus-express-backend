@@ -6,6 +6,8 @@ import com.project.campusExpress.entity.User;
 import com.project.campusExpress.repository.OrderRepository;
 import com.project.campusExpress.repository.ProductRepository;
 import com.project.campusExpress.repository.UserRepository;
+import com.project.campusExpress.service.JwtService;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,14 +25,24 @@ public class OrderController {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private JwtService jwtservice;
+
     @GetMapping
     public List<Order> getAllOrders() {
+
         return orderRepository.findAll();
     }
 
-    @PostMapping("/users/{userId}/product/{productId}")
-    public Order createOrder(@PathVariable Long userId, @PathVariable Long productId, @RequestBody Order order) {
-        User user = userRepository.findById(userId)
+    @PostMapping("/product/{productId}")
+    @Transactional
+    public Order createOrder(@PathVariable Long productId, @RequestBody Order order,@RequestHeader("Authorization") String tokenHeader) {
+
+        String token= tokenHeader.substring(7);
+        String username= jwtservice.extractUsername(token);
+
+
+        User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new RuntimeException("User not found!"));
 
         Product product = productRepository.findById(productId)
@@ -38,11 +50,13 @@ public class OrderController {
 
         Integer orderedQuantity = order.getQuantity(); //stockQuantity update after placing order
         if (product.getStockQuantity() < orderedQuantity) {
-            throw new RuntimeException("Stock is not enough Only!" + product.getStockQuantity() + "products are left");
+            throw new RuntimeException("Stock is not enough. Only! " + product.getStockQuantity() + " products are left");
         } else {
             product.setStockQuantity(product.getStockQuantity() - orderedQuantity);
         }
 
+           Double totalPrice= product.getPrice()*orderedQuantity;
+        order.setTotalPrice(totalPrice);
 
         productRepository.save(product);
         order.setUser(user); //updating user_id column in order table

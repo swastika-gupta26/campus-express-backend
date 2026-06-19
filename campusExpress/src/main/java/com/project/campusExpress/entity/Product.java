@@ -1,9 +1,8 @@
 package com.project.campusExpress.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+
+import java.util.Optional;
 
 @Entity
 public class Product {
@@ -16,7 +15,19 @@ public class Product {
     private Double price;
     private Integer stockQuantity;
 
-    // 1. Khali Constructor (Spring Boot ko Postman ka data read karne ke liye chahiye)
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User createdBy;
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+
     public Product() {
     }
 
@@ -59,4 +70,6 @@ public class Product {
     public void setStockQuantity(Integer stockQuantity) {
         this.stockQuantity = stockQuantity;
     }
+
+
 }

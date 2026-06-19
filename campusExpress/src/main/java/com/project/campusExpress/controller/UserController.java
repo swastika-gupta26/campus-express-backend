@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/admin")
 public class UserController {
 
     @Autowired
@@ -22,5 +22,15 @@ public class UserController {
     @PostMapping
     public User createUser(@RequestBody User user) {
         return userRepository.save(user);
+    }
+
+    @DeleteMapping("/user/delete/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        if (userRepository.existsById(id)) {
+            userRepository.deleteById(id);
+            return "User with ID " + id + " has been successfully deleted by Admin!";
+        } else {
+            return "User not found!";
+        }
     }
 }
