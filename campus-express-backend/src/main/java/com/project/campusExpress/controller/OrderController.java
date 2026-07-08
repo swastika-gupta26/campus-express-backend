@@ -1,17 +1,26 @@
 package com.project.campusExpress.controller;
 
+import com.project.campusExpress.dto.request.CancelRequest;
+import com.project.campusExpress.dto.response.OrderResponse;
 import com.project.campusExpress.entity.Order;
 import com.project.campusExpress.entity.Product;
 import com.project.campusExpress.entity.User;
+import com.project.campusExpress.exception.BadRequestException;
+import com.project.campusExpress.exception.ResourceNotFoundException;
+import com.project.campusExpress.exception.UnauthorizedException;
 import com.project.campusExpress.repository.OrderRepository;
 import com.project.campusExpress.repository.ProductRepository;
 import com.project.campusExpress.repository.UserRepository;
 import com.project.campusExpress.service.JwtService;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.security.Principal;
+import java.time.LocalDateTime;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/orders")
@@ -29,28 +38,31 @@ public class OrderController {
     private JwtService jwtservice;
 
     @GetMapping
-    public List<Order> getAllOrders() {
-
-        return orderRepository.findAll();
+    public List<OrderResponse> getAllOrders() {
+        return orderRepository.findAll()
+                .stream()
+                .map(OrderResponse::from)
+                .collect(Collectors.toList());
     }
+
 
     @PostMapping("/product/{productId}")
     @Transactional
-    public Order createOrder(@PathVariable Long productId, @RequestBody Order order,@RequestHeader("Authorization") String tokenHeader) {
+    public OrderResponse createOrder(@PathVariable Long productId, @RequestBody Order order,@RequestHeader("Authorization") String tokenHeader) {
 
         String token= tokenHeader.substring(7);
         String username= jwtservice.extractUsername(token);
 
 
         User user = userRepository.findByUsername(username)
-                .orElseThrow(() -> new RuntimeException("User not found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("User not found!"));
 
         Product product = productRepository.findById(productId)
-                .orElseThrow(() -> new RuntimeException("Product not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Product not found"));
 
         Integer orderedQuantity = order.getQuantity(); //stockQuantity update after placing order
         if (product.getStockQuantity() < orderedQuantity) {
-            throw new RuntimeException("Stock is not enough. Only! " + product.getStockQuantity() + " products are left");
+            throw new BadRequestException("Stock is not enough. Only! " + product.getStockQuantity() + " products are left");
         } else {
             product.setStockQuantity(product.getStockQuantity() - orderedQuantity);
         }
@@ -58,23 +70,85 @@ public class OrderController {
            Double totalPrice= product.getPrice()*orderedQuantity;
         order.setTotalPrice(totalPrice);
 
+        order.setDeliveryAddress(order.getDeliveryAddress());
+        order.setContactNumber(order.getContactNumber());
+
         productRepository.save(product);
+
+        order.setProduct(product);
         order.setUser(user); //updating user_id column in order table
-        return orderRepository.save(order);
+
+        order.setProductSnapshot(product.getName());
+        order.setPriceSnapshot(product.getPrice());
+        order.setOrderDate(LocalDateTime.now());
+        return OrderResponse.from(orderRepository.save(order));
     }
 
     @PutMapping("/{orderId}/status") //order status update
-    public Order updateOrderStatus(@PathVariable Long orderId, @RequestParam String newStatus) {
+    public OrderResponse updateOrderStatus(@PathVariable Long orderId, @RequestParam String newStatus) {
         Order order = orderRepository.findById(orderId)
-                .orElseThrow(() -> new RuntimeException("Order not found!"));
+                .orElseThrow(() -> new ResourceNotFoundException("Order not found!"));
 
         order.setStatus(newStatus);
+        if ("DELIVERED".equals(newStatus)) {
+            order.setDeliveredAt(LocalDateTime.now());
+        }
 
-        return orderRepository.save(order);
+        return OrderResponse.from(orderRepository.save(order));
     }
 
     @GetMapping("/hostel/{hostelName}")
-    public List<Order> getOrdersByHostel(@PathVariable String hostelName) {
-        return orderRepository.findByUserHostelName(hostelName);
+    public List<OrderResponse> getOrdersByHostel(@PathVariable String hostelName) {
+        return orderRepository.findByUserHostelName(hostelName)
+                .stream()
+                .map(OrderResponse::from)
+                .collect(Collectors.toList());
+    }
+
+    @GetMapping("/my-sales")
+    public List<OrderResponse> getMyOrders(Principal principal){
+        String username= principal.getName();
+        User producer=userRepository.findByUsername(username)
+                .orElseThrow(()->new ResourceNotFoundException("User not found!"));
+        return orderRepository.findByProductCreatedBy(producer)
+                .stream()
+                .map(OrderResponse::from)
+                .collect(Collectors.toList());
+    }
+    @GetMapping("/my-orders")
+            public List<OrderResponse> getMyOrderHistory(Principal principal){
+        String username =principal.getName();
+        User buyer =userRepository.findByUsername(username)
+                .orElseThrow(()->new ResourceNotFoundException("User not found!"));
+        return orderRepository.findByUser(buyer)
+                .stream()
+                .map(OrderResponse::from)
+                .collect(Collectors.toList());
+    }
+    @PutMapping("/{orderId}/cancel")
+    @Transactional
+    public ResponseEntity<?> cancelOrder(@PathVariable Long orderId, @RequestBody CancelRequest request, Principal principal){
+        String username=principal.getName();
+        Order order= orderRepository.findById(orderId)
+                .orElseThrow(()->new ResourceNotFoundException("Order not found!"));
+
+        if(order.getUser().getUsername().equals(username)==false){
+            throw new UnauthorizedException("You can only cancel your own orders.");
+        }
+
+        if("CANCELLED".equals(order.getStatus())||"DELIVERED".equals(order.getStatus())){
+            throw new BadRequestException("This oder can not be cancelled.");
+        }
+        //stock rollback
+        Product product=order.getProduct();
+        product.setStockQuantity(order.getQuantity()+ product.getStockQuantity());
+        productRepository.save(product);
+
+
+        order.setStatus("CANCELLED");
+        order.setCancelReason(request.getReason());
+        orderRepository.save(order);
+
+        return ResponseEntity.ok(OrderResponse.from(order));
     }
 }

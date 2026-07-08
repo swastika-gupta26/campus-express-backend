@@ -2,6 +2,8 @@ package com.project.campusExpress.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -18,6 +20,14 @@ public class User {
     @Column(nullable = false)
     private String password;
     private String role;
+    @Column(name = "gender")
+    private String gender;
+    @Column(name = "dob")
+    private LocalDate dob;
+    private String email;
+    private String course;
+    private String year;
+    private boolean isProducer = false;
 
     public User() {
     }
@@ -93,6 +103,24 @@ public class User {
     public void setRole(String role){
         this.role=role;
     }
+
+    public String getGender() { return gender; }
+    public void setGender(String gender) { this.gender = gender; }
+
+    public LocalDate getDob() { return dob; }
+    public void setDob(LocalDate dob) { this.dob = dob; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public String getCourse() { return course; }
+    public void setCourse(String course) { this.course = course; }
+
+    public String getYear() { return year; }
+    public void setYear(String year) { this.year = year; }
+
+    public boolean isProducer() { return isProducer; }
+    public void setProducer(boolean producer) { this.isProducer = producer; }
 }
 
 

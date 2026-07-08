@@ -14,31 +14,32 @@ public class Product {
     private String name;
     private Double price;
     private Integer stockQuantity;
+    private String description;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User createdBy;
 
-    public User getCreatedBy() {
-        return createdBy;
-    }
 
-    public void setCreatedBy(User createdBy) {
-        this.createdBy = createdBy;
-    }
+
+
+    @OneToMany(mappedBy = "product", cascade = CascadeType.MERGE)
+    private java.util.List<com.project.campusExpress.entity.Order> orders;
+
+
 
 
     public Product() {
     }
 
-    // 2. Parameterized Constructor
+
     public Product(String name, Double price, Integer stockQuantity) {
         this.name = name;
         this.price = price;
         this.stockQuantity = stockQuantity;
     }
 
-    // 3. Getters and Setters (Manually generated)
+
     public Long getId() {
         return id;
     }
@@ -70,6 +71,18 @@ public class Product {
     public void setStockQuantity(Integer stockQuantity) {
         this.stockQuantity = stockQuantity;
     }
+
+    public User getCreatedBy() {
+        return createdBy;
+    }
+
+    public void setCreatedBy(User createdBy) {
+        this.createdBy = createdBy;
+    }
+
+    public String getDescription() { return description; }
+    public void setDescription(String description) { this.description = description; }
+
 
 
 }

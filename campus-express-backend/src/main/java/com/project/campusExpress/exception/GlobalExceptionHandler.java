@@ -10,14 +10,43 @@ import java.time.LocalDateTime;
 @ControllerAdvice
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(RuntimeException.class)
-    public ResponseEntity<ErrorResponse> handleRuntimeException(RuntimeException ex){
-        ErrorResponse error = new ErrorResponse(
-                ex.getMessage(),
-                HttpStatus.NOT_FOUND.value(),
-                LocalDateTime.now()
+    @ExceptionHandler(ResourceNotFoundException.class)
+    public ResponseEntity<ErrorResponse> handleNotFound(ResourceNotFoundException ex) {
+        return new ResponseEntity<>(
+                new ErrorResponse(ex.getMessage(), 404, LocalDateTime.now()),
+                HttpStatus.NOT_FOUND
         );
-        return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(BadRequestException.class)
+    public ResponseEntity<ErrorResponse> handleBadRequest(BadRequestException ex) {
+        return new ResponseEntity<>(
+                new ErrorResponse(ex.getMessage(), 400, LocalDateTime.now()),
+                HttpStatus.BAD_REQUEST
+        );
+    }
+
+    @ExceptionHandler(UnauthorizedException.class)
+    public ResponseEntity<ErrorResponse> handleUnauthorized(UnauthorizedException ex) {
+        return new ResponseEntity<>(
+                new ErrorResponse(ex.getMessage(), 403, LocalDateTime.now()),
+                HttpStatus.FORBIDDEN
+        );
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public ResponseEntity<ErrorResponse> handleRuntime(RuntimeException ex) {
+        return new ResponseEntity<>(
+                new ErrorResponse("Something went wrong: " + ex.getMessage(), 500, LocalDateTime.now()),
+                HttpStatus.INTERNAL_SERVER_ERROR
+        );
+    }
+
+    @ExceptionHandler(Exception.class)
+    public ResponseEntity<ErrorResponse> handleGeneral(Exception ex) {
+        return new ResponseEntity<>(
+                new ErrorResponse("Internal server error. Please try again.", 500, LocalDateTime.now()),
+                HttpStatus.INTERNAL_SERVER_ERROR
+        );
+    }
 }

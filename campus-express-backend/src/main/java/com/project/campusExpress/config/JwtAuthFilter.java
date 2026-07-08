@@ -2,6 +2,7 @@ package com.project.campusExpress.config;
 
 import com.project.campusExpress.service.CustomUserDetailsService;
 import com.project.campusExpress.service.JwtService;
+import io.jsonwebtoken.ExpiredJwtException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -32,12 +33,24 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         String token = null;
         String username = null;
 
+try {
+    if (authHeader != null && authHeader.startsWith("Bearer ")) {
+        token = authHeader.substring(7);
+        username = jwtService.extractUsername(token);
+    }
+} catch (ExpiredJwtException e) {
 
-        if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            token = authHeader.substring(7);
-            username = jwtService.extractUsername(token);
-        }
+    response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+    response.setContentType("application/json");
+    response.getWriter().write("{\"message\": \"JWT Token has expired. Please login again.\"}");
+    return;
+} catch (Exception e) {
 
+    response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+    response.setContentType("application/json");
+    response.getWriter().write("{\"message\": \"Invalid JWT Token.\"}");
+    return;
+}
 
         if (username != null && SecurityContextHolder.getContext().getAuthentication() == null) {
 

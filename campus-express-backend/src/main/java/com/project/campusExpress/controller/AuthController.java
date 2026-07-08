@@ -11,6 +11,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "http://localhost:5173")
 public class AuthController {
     @Autowired
     private JwtService jwtService;
@@ -51,6 +52,7 @@ public class AuthController {
             if (existingUser.isPresent()) {
                 return "Username is already taken";
             }
+            user.setRole("ROLE_CONSUMER");
 
             String encryptedPassword = passwordEncoder.encode(user.getPassword());
             user.setPassword(encryptedPassword);

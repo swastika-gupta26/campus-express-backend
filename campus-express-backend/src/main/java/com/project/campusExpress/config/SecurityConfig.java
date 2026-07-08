@@ -41,17 +41,31 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http)
             throws Exception {
         return http
+
+                .cors(cors -> cors.configurationSource(request -> {
+                    org.springframework.web.cors.CorsConfiguration config = new org.springframework.web.cors.CorsConfiguration();
+                    config.setAllowedOrigins(java.util.List.of("http://localhost:5173"));
+                    config.setAllowedMethods(java.util.List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+                    config.setAllowedHeaders(java.util.List.of("*"));
+                    config.setAllowCredentials(true);
+                    return config;
+                }))
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/api/auth/login", "/api/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/api/products/**").hasAnyRole("CONSUMER", "PRODUCER", "ADMIN")
-                        .requestMatchers(HttpMethod.POST, "/api/products/**").hasRole("PRODUCER")
+                        .requestMatchers(HttpMethod.GET, "/api/products/**").hasAnyRole("CONSUMER","PRODUCER", "ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/products/**").hasAnyRole("PRODUCER")
                         .requestMatchers(HttpMethod.POST, "/api/orders/product/**").hasRole("CONSUMER")
-                        .requestMatchers("/api/admin/**").hasRole("ADMIN")
+                        .requestMatchers("/api/user/my-profile").hasAnyRole("CONSUMER","PRODUCER", "ADMIN")
+                        .requestMatchers("/api/user/admin/delete/{id}").hasRole("ADMIN")
+                        .requestMatchers("/api/user/become-producer").authenticated()
+                        .requestMatchers(HttpMethod.GET, "/api/orders/my-orders").hasAnyRole("CONSUMER","PRODUCER", "ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/orders/my-sales").hasAnyRole("PRODUCER", "ADMIN")
                         .requestMatchers(HttpMethod.GET, "/api/orders").hasAnyRole("PRODUCER", "ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/orders/*/cancel").hasAnyRole("CONSUMER", "PRODUCER", "ADMIN")
                         .requestMatchers("/api/orders/{orderId}/status").hasAnyRole("PRODUCER")
                         .requestMatchers(HttpMethod.GET, "/api/orders/hostel/**").hasAnyRole("PRODUCER", "ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/api/products/**").authenticated()
+                        .requestMatchers(HttpMethod.DELETE, "/api/products/**").hasAnyRole("PRODUCER", "ADMIN")
                         .anyRequest().authenticated()
                 )
                 .sessionManagement(session -> session

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/request/CancelRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/request/CancelRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/response/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/response/OrderResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/OrderRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0098949658942646" />
+      <entry key="MS500" value="2.1345329476667416" />
+      <entry key="S2" value="4.889342754480401" />
+      <entry key="S5" value="6.474050767308908" />
+      <entry key="S10" value="7.422703025823359" />
+      <entry key="S30" value="8.367422339869059" />
+      <entry key="S60" value="8.666900887314448" />
+      <entry key="M2" value="8.82892703821172" />
+      <entry key="M5" value="8.930441028804523" />
+      <entry key="M10" value="8.965029011329792" />
+      <entry key="M15" value="8.976933780233907" />
+      <entry key="M30" value="9.126792278229633" />
+      <entry key="H1" value="12.0337539381273" />
+      <entry key="H2" value="25.275220806177447" />
+      <entry key="H4" value="73.4444369851677" />
+      <entry key="D1" value="915.6829161255932" />
+      <entry key="W1" value="2032.7934129721177" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="5.990920184964092E-17" />
+      <entry key="MS500" value="5.695065282170247E-4" />
+      <entry key="S2" value="0.15448085935039313" />
+      <entry key="S5" value="0.47375070654085055" />
+      <entry key="S10" value="0.6882955081510052" />
+      <entry key="S30" value="0.882927367269323" />
+      <entry key="S60" value="0.9396421485168291" />
+      <entry key="M2" value="0.9693514061045296" />
+      <entry key="M5" value="0.987625962031938" />
+      <entry key="M10" value="0.9937937220732949" />
+      <entry key="M15" value="0.9958581929385006" />
+      <entry key="M30" value="0.9979835513867625" />
+      <entry key="H1" value="1.009492153116293" />
+      <entry key="H2" value="1.4836559166319159" />
+      <entry key="H4" value="6.920356574334406" />
+      <entry key="D1" value="124.50314510259798" />
+      <entry key="W1" value="302.1648863561076" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.07290194654047909" />
+      <entry key="MS500" value="1.6838655230394766" />
+      <entry key="S2" value="4.774870830693697" />
+      <entry key="S5" value="6.616003398151416" />
+      <entry key="S10" value="7.829352084246079" />
+      <entry key="S30" value="9.112187108195032" />
+      <entry key="S60" value="9.530178382743117" />
+      <entry key="M2" value="9.758113385012852" />
+      <entry key="M5" value="9.901502855821317" />
+      <entry key="M10" value="9.950455724978571" />
+      <entry key="M15" value="9.967194938769854" />
+      <entry key="M30" value="10.121965648265483" />
+      <entry key="H1" value="13.041801871034767" />
+      <entry key="H2" value="26.757511552766335" />
+      <entry key="H4" value="80.35983329743674" />
+      <entry key="D1" value="1040.1695237630404" />
+      <entry key="W1" value="2334.9527895132615" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3ErgSi1k3ywLo1gt5gCX5s8cI1v" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.CampusExpressApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/riddh/Downloads/campusExpress&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="CampusExpressApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="uZQothiVcEdxmYsVlsLJwXcbJQYwBqsy" />
+        <env name="DB_URL" value="jdbc:mysql://hayabusa.proxy.rlwy.net:28730/railway" />
+        <env name="DB_USERNAME" value="root" />
+        <env name="JWT_SECRET_KEY" value="CampusExpressSuperSecretKeyWhichIsVeryLongAndSecure123456" />
+      </envs>
+      <module name="campusExpress" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.project.campusExpress.CampusExpressApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="StructureViewState">
+    <option name="selectedTab" value="Logical" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="" />
+      <created>1780942103576</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1780942103576</updated>
+      <workItem from="1780942104809" duration="289000" />
+      <workItem from="1780942426908" duration="456000" />
+      <workItem from="1780983153035" duration="1625000" />
+      <workItem from="1780986430877" duration="14498000" />
+      <workItem from="1781070492620" duration="9048000" />
+      <workItem from="1781092437233" duration="5107000" />
+      <workItem from="1781176181571" duration="23000" />
+      <workItem from="1781190201001" duration="656000" />
+      <workItem from="1781259038696" duration="23000" />
+      <workItem from="1781329966275" duration="3609000" />
+      <workItem from="1781437314784" duration="4378000" />
+      <workItem from="1781445070805" duration="1196000" />
+      <workItem from="1781446320977" duration="3882000" />
+      <workItem from="1781498301864" duration="12525000" />
+      <workItem from="1781522253132" duration="3480000" />
+      <workItem from="1781543633351" duration="120000" />
+      <workItem from="1781543962427" duration="1940000" />
+      <workItem from="1781685883835" duration="2507000" />
+      <workItem from="1781695526635" duration="5777000" />
+      <workItem from="1781717743324" duration="771000" />
+      <workItem from="1781719030274" duration="5502000" />
+      <workItem from="1781769174742" duration="9954000" />
+      <workItem from="1781783847640" duration="2302000" />
+      <workItem from="1781791658672" duration="7095000" />
+      <workItem from="1781848181058" duration="6401000" />
+      <workItem from="1781880491927" duration="2028000" />
+      <workItem from="1781893140456" duration="1015000" />
+      <workItem from="1781929929489" duration="1790000" />
+      <workItem from="1781941394558" duration="1415000" />
+      <workItem from="1782056590572" duration="5205000" />
+      <workItem from="1782191134942" duration="1319000" />
+      <workItem from="1782201968375" duration="9046000" />
+      <workItem from="1782236344999" duration="3758000" />
+      <workItem from="1782306406212" duration="3275000" />
+      <workItem from="1782452616102" duration="22000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/campusExpress$CampusExpressApplication.ic" NAME="CampusExpressApplication Coverage Results" MODIFIED="1783445252866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
+  </component>
+</project>
