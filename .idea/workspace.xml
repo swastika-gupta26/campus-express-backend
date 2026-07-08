@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/request/CancelRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/request/CancelRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/response/OrderResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/dto/response/OrderResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/CustomUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/CustomUserDetailsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,61 +33,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0098949658942646" />
-      <entry key="MS500" value="2.1345329476667416" />
-      <entry key="S2" value="4.889342754480401" />
-      <entry key="S5" value="6.474050767308908" />
-      <entry key="S10" value="7.422703025823359" />
-      <entry key="S30" value="8.367422339869059" />
-      <entry key="S60" value="8.666900887314448" />
-      <entry key="M2" value="8.82892703821172" />
-      <entry key="M5" value="8.930441028804523" />
-      <entry key="M10" value="8.965029011329792" />
-      <entry key="M15" value="8.976933780233907" />
-      <entry key="M30" value="9.126792278229633" />
-      <entry key="H1" value="12.0337539381273" />
-      <entry key="H2" value="25.275220806177447" />
-      <entry key="H4" value="73.4444369851677" />
-      <entry key="D1" value="915.6829161255932" />
-      <entry key="W1" value="2032.7934129721177" />
+      <entry key="MS100" value="1.0008650407831923" />
+      <entry key="MS500" value="1.6973015978611694" />
+      <entry key="S2" value="4.334405461407524" />
+      <entry key="S5" value="5.791457065294304" />
+      <entry key="S10" value="6.7736559235765466" />
+      <entry key="S30" value="8.361619732960369" />
+      <entry key="S60" value="9.070024639970807" />
+      <entry key="M2" value="9.502930033384274" />
+      <entry key="M5" value="9.992191704477587" />
+      <entry key="M10" value="12.457516649798709" />
+      <entry key="M15" value="15.934724319901859" />
+      <entry key="M30" value="24.0980270222856" />
+      <entry key="H1" value="33.50003982855481" />
+      <entry key="H2" value="49.75201978493845" />
+      <entry key="H4" value="97.45871894441585" />
+      <entry key="D1" value="932.7971645280724" />
+      <entry key="W1" value="2061.470214438033" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="5.990920184964092E-17" />
-      <entry key="MS500" value="5.695065282170247E-4" />
-      <entry key="S2" value="0.15448085935039313" />
-      <entry key="S5" value="0.47375070654085055" />
-      <entry key="S10" value="0.6882955081510052" />
-      <entry key="S30" value="0.882927367269323" />
-      <entry key="S60" value="0.9396421485168291" />
-      <entry key="M2" value="0.9693514061045296" />
-      <entry key="M5" value="0.987625962031938" />
-      <entry key="M10" value="0.9937937220732949" />
-      <entry key="M15" value="0.9958581929385006" />
-      <entry key="M30" value="0.9979835513867625" />
-      <entry key="H1" value="1.009492153116293" />
-      <entry key="H2" value="1.4836559166319159" />
-      <entry key="H4" value="6.920356574334406" />
-      <entry key="D1" value="124.50314510259798" />
-      <entry key="W1" value="302.1648863561076" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="6.509999640558252E-134" />
+      <entry key="S10" value="2.6067610865994152E-67" />
+      <entry key="S30" value="8.116823866944281E-23" />
+      <entry key="S60" value="1.2176512938783861E-11" />
+      <entry key="M2" value="4.874517280955106E-6" />
+      <entry key="M5" value="0.011336489913718065" />
+      <entry key="M10" value="0.1504992889114217" />
+      <entry key="M15" value="0.3564380573367054" />
+      <entry key="M30" value="0.8442960628388664" />
+      <entry key="H1" value="1.3062335843688975" />
+      <entry key="H2" value="2.0015196921414127" />
+      <entry key="H4" value="7.1054432038444215" />
+      <entry key="D1" value="123.24666159065129" />
+      <entry key="W1" value="302.3800591847265" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.07290194654047909" />
-      <entry key="MS500" value="1.6838655230394766" />
-      <entry key="S2" value="4.774870830693697" />
-      <entry key="S5" value="6.616003398151416" />
-      <entry key="S10" value="7.829352084246079" />
-      <entry key="S30" value="9.112187108195032" />
-      <entry key="S60" value="9.530178382743117" />
-      <entry key="M2" value="9.758113385012852" />
-      <entry key="M5" value="9.901502855821317" />
-      <entry key="M10" value="9.950455724978571" />
-      <entry key="M15" value="9.967194938769854" />
-      <entry key="M30" value="10.121965648265483" />
-      <entry key="H1" value="13.041801871034767" />
-      <entry key="H2" value="26.757511552766335" />
-      <entry key="H4" value="80.35983329743674" />
-      <entry key="D1" value="1040.1695237630404" />
-      <entry key="W1" value="2334.9527895132615" />
+      <entry key="MS100" value="0.05823475706268576" />
+      <entry key="MS500" value="1.2316988476491173" />
+      <entry key="S2" value="4.168886762481268" />
+      <entry key="S5" value="5.718144907300246" />
+      <entry key="S10" value="6.735228160648167" />
+      <entry key="S30" value="8.348079248996081" />
+      <entry key="S60" value="9.063107043512062" />
+      <entry key="M2" value="9.499431948704643" />
+      <entry key="M5" value="10.001866848999411" />
+      <entry key="M10" value="12.605646142199307" />
+      <entry key="M15" value="16.28806077945524" />
+      <entry key="M30" value="24.938965546373186" />
+      <entry key="H1" value="34.8037270296215" />
+      <entry key="H2" value="51.75145659604414" />
+      <entry key="H4" value="104.55916872962132" />
+      <entry key="D1" value="1056.0274871969586" />
+      <entry key="W1" value="2363.8447637447493" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
