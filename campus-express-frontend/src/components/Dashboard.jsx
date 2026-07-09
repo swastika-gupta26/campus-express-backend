@@ -16,7 +16,7 @@ function Dashboard() {
         const fetchProducts = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/api/products', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/products', {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

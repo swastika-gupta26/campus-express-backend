@@ -27,7 +27,7 @@ function MyProfile() {
 
                 console.log("Fetching profile with token:", token); // Control check for console
 
-                const response = await axios.get('http://localhost:8080/api/user/my-profile', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/user/my-profile', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
@@ -67,7 +67,7 @@ function MyProfile() {
         setError('');
         setSuccess('');
         try {
-            await axios.put('http://localhost:8080/api/user/my-profile', {
+            await axios.put('https://campus-express-backend-pnkl.onrender.com/api/user/my-profile', {
                 email: profile.email,
                 phoneNumber: profile.phoneNo,
                 hostelName: profile.hostelName,

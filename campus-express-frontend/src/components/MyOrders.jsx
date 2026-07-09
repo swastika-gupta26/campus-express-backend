@@ -13,7 +13,7 @@ function MyOrders() {
         const fetchOrders = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/api/orders/my-sales', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/orders/my-sales', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(response.data);
@@ -35,7 +35,7 @@ function MyOrders() {
     const handleStatusUpdate = async (orderId, newStatus) => {
         setUpdatingOrderId(orderId);
         try {
-            await axios.put(`http://localhost:8080/api/orders/${orderId}/status`,
+            await axios.put(`https://campus-express-backend-pnkl.onrender.com/api/orders/${orderId}/status`,
                 null,
                 {
                     params: { newStatus },

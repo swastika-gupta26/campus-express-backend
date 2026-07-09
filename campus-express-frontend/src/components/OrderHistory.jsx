@@ -11,7 +11,7 @@ function OrderHistory() {
         const fetchOrders = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/api/orders/my-orders', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/orders/my-orders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 

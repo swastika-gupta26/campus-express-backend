@@ -17,7 +17,7 @@ function BuyerOrders() {
         const fetchOrders = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/api/orders/my-orders', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/orders/my-orders', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setOrders(response.data);
@@ -44,7 +44,7 @@ function BuyerOrders() {
         setCancelling(true);
         setCancelError('');
         try {
-            await axios.put(`http://localhost:8080/api/orders/${cancellingOrderId}/cancel`,
+            await axios.put(`https://campus-express-backend-pnkl.onrender.com/api/orders/${cancellingOrderId}/cancel`,
                 { reason: cancelReason },
                 { headers: { Authorization: `Bearer ${token}` } }
             );

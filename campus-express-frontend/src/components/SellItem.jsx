@@ -22,12 +22,12 @@ function SellItem() {
         const fetchMyProducts = async () => {
             try {
                 setLoading(true);
-                const profileRes = await axios.get('http://localhost:8080/api/user/my-profile', {
+                const profileRes = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/user/my-profile', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const myUsername = profileRes.data.username;
 
-                const productsRes = await axios.get('http://localhost:8080/api/products', {
+                const productsRes = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/products', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
@@ -45,7 +45,7 @@ function SellItem() {
 
         const setupProducer = async () => {
             try {
-                const response = await axios.put('http://localhost:8080/api/user/become-producer', {}, {
+                const response = await axios.put('https://campus-express-backend-pnkl.onrender.com/api/user/become-producer', {}, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
 
@@ -77,7 +77,7 @@ function SellItem() {
         setSubmitting(true);
 
         try {
-            const response = await axios.post('http://localhost:8080/api/products', {
+            const response = await axios.post('https://campus-express-backend-pnkl.onrender.com/api/products', {
                 name: newName,
                 price: parseFloat(newPrice),
                 stockQuantity: parseInt(newStockQuantity),
@@ -113,7 +113,7 @@ function SellItem() {
 
     const handleDeleteProduct = async (productId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/products/${productId}`, {
+            await axios.delete(`https://campus-express-backend-pnkl.onrender.com/api/products/${productId}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             setMyProducts(myProducts.filter((p) => p.id !== productId));

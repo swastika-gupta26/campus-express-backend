@@ -21,7 +21,7 @@ function BuyProduct() {
         const fetchProduct = async () => {
             try {
                 setLoading(true);
-                const response = await axios.get('http://localhost:8080/api/products', {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/products', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 const found = response.data.find((p) => String(p.id) === String(productId));
@@ -65,7 +65,7 @@ function BuyProduct() {
 
         setSubmitting(true);
         try {
-            await axios.post(`http://localhost:8080/api/orders/product/${productId}`,
+            await axios.post(`https://campus-express-backend-pnkl.onrender.com/api/orders/product/${productId}`,
                 { quantity: parseInt(quantity),
                     deliveryAddress: deliveryAddress,
                     contactNumber: contactNumber
