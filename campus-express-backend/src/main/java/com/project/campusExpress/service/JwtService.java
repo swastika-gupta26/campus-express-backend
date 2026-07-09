@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Component
 public class JwtService {
-    @Value("${jwt.secret}")
+    @Value("${jwt.secret:NOT_FOUND}")
     private String SECRET_KEY;
 
      public String generateToken(String username){

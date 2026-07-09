@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4bc0e33-250d-42c5-84f3-c45cbdf512f8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/entity/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/ErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/exception/ErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/java/com/project/campusExpress/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/campus-express-backend/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,61 +39,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0028915544454124" />
-      <entry key="MS500" value="1.8596734921572544" />
-      <entry key="S2" value="5.405153142475225" />
-      <entry key="S5" value="10.403039438110852" />
-      <entry key="S10" value="16.475943385738134" />
-      <entry key="S30" value="25.432582728058616" />
-      <entry key="S60" value="28.86445438901807" />
-      <entry key="M2" value="30.834914129687945" />
-      <entry key="M5" value="32.10953389251222" />
-      <entry key="M10" value="32.65557219621707" />
-      <entry key="M15" value="33.53240628221557" />
-      <entry key="M30" value="40.18769834795744" />
-      <entry key="H1" value="57.23398378597126" />
-      <entry key="H2" value="84.07425779603685" />
-      <entry key="H4" value="135.70360957120658" />
-      <entry key="D1" value="956.138980940156" />
-      <entry key="W1" value="2120.081004941805" />
+      <entry key="MS100" value="1.4719741603693532" />
+      <entry key="MS500" value="3.1314119139041905" />
+      <entry key="S2" value="5.397468795445932" />
+      <entry key="S5" value="7.376161572255207" />
+      <entry key="S10" value="13.068507380061046" />
+      <entry key="S30" value="33.826698825561465" />
+      <entry key="S60" value="50.27625103437894" />
+      <entry key="M2" value="63.8974746254934" />
+      <entry key="M5" value="74.9687914273021" />
+      <entry key="M10" value="79.34428069847891" />
+      <entry key="M15" value="81.38154391584196" />
+      <entry key="M30" value="90.49917591102361" />
+      <entry key="H1" value="119.58861587663718" />
+      <entry key="H2" value="171.08862753909168" />
+      <entry key="H4" value="245.4739756778201" />
+      <entry key="D1" value="1073.034316068964" />
+      <entry key="W1" value="2284.600719619453" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
-      <entry key="S10" value="9.643614664847136E-274" />
-      <entry key="S30" value="1.2553524132763287E-91" />
-      <entry key="S60" value="4.7886456848310146E-46" />
-      <entry key="M2" value="3.056866688421628E-23" />
-      <entry key="M5" value="1.4907903056241318E-9" />
-      <entry key="M10" value="5.457621650764775E-5" />
-      <entry key="M15" value="0.0018125780619893872" />
-      <entry key="M30" value="0.06020756867543542" />
-      <entry key="H1" value="0.34881809703249195" />
-      <entry key="H2" value="1.034305773025409" />
-      <entry key="H4" value="5.107821514354939" />
-      <entry key="D1" value="116.6494210685043" />
-      <entry key="W1" value="300.0128955107525" />
+      <entry key="S10" value="1.2851934159989429E-167" />
+      <entry key="S30" value="3.704074130826656E-56" />
+      <entry key="S60" value="2.723649471745222E-28" />
+      <entry key="M2" value="2.3887254985426898E-14" />
+      <entry key="M5" value="6.1942657491956336E-6" />
+      <entry key="M10" value="0.004399287702909949" />
+      <entry key="M15" value="0.04086708339848502" />
+      <entry key="M30" value="0.39614626685098664" />
+      <entry key="H1" value="1.3133097831523668" />
+      <entry key="H2" value="2.6829119512817408" />
+      <entry key="H4" value="6.371874492261069" />
+      <entry key="D1" value="112.74538399439444" />
+      <entry key="W1" value="301.067374453241" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.9422287552915491" />
-      <entry key="MS500" value="1.8207729044910066" />
-      <entry key="S2" value="5.365074217556327" />
-      <entry key="S5" value="10.371845417569446" />
-      <entry key="S10" value="16.450012655797117" />
-      <entry key="S30" value="25.418294845586278" />
-      <entry key="S60" value="28.85616956021176" />
-      <entry key="M2" value="30.830438422783836" />
-      <entry key="M5" value="32.10765655871702" />
-      <entry key="M10" value="32.65466788856445" />
-      <entry key="M15" value="33.53354269028828" />
-      <entry key="M30" value="40.2472660659819" />
-      <entry key="H1" value="57.581852621700136" />
-      <entry key="H2" value="85.10731710063826" />
-      <entry key="H4" value="140.8077436313234" />
-      <entry key="D1" value="1072.7729191346853" />
-      <entry key="W1" value="2420.08843099575" />
+      <entry key="MS100" value="1.3612275595532133" />
+      <entry key="MS500" value="3.0472344938060356" />
+      <entry key="S2" value="5.356843913340149" />
+      <entry key="S5" value="7.355699846689218" />
+      <entry key="S10" value="13.053934978955578" />
+      <entry key="S30" value="33.81507123265349" />
+      <entry key="S60" value="50.26623366246686" />
+      <entry key="M2" value="63.890237439162966" />
+      <entry key="M5" value="74.96506744642193" />
+      <entry key="M10" value="79.34661598979585" />
+      <entry key="M15" value="81.42086519465575" />
+      <entry key="M30" value="90.89390215968427" />
+      <entry key="H1" value="120.90031112611751" />
+      <entry key="H2" value="173.7698510364626" />
+      <entry key="H4" value="251.8426694899819" />
+      <entry key="D1" value="1185.7650883445783" />
+      <entry key="W1" value="2585.6626551528925" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -98,41 +105,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;Spring Boot.CampusExpressApplication.executor&quot;: &quot;Run&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/riddh/Downloads/campusExpress&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.CampusExpressApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/riddh/Downloads/campusExpress",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2026.1.2\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\riddh\Downloads\campusExpress\campus-express-backend" />
+    </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
       <recent name="" />
     </key>
@@ -140,9 +153,9 @@
   <component name="RunManager">
     <configuration name="CampusExpressApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <envs>
-        <env name="DB_PASSWORD" value="Swariddh2609@" />
-        <env name="DB_URL" value="jdbc:mysql://hayabusa.proxy.rlwy.net:28730/railway" />
-        <env name="DB_USERNAME" value="root" />
+        <env name="DB_PASSWORD" value="7TP1IRMBh3dfYWpG" />
+        <env name="DB_URL" value="jdbc:mysql://gateway01.ap-southeast-1.prod.aws.tidbcloud.com:4000/campus_db?sslMode=REQUIRED" />
+        <env name="DB_USERNAME" value="32XFwMZSrgbnu5h.root" />
         <env name="JWT_SECRET_KEY" value="CampusExpressSuperSecretKeyWhichIsVeryLongAndSecure123456" />
       </envs>
       <module name="campusExpress" />
