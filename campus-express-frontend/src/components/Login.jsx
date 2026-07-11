@@ -35,10 +35,10 @@ function Login() {
                 localStorage.setItem('campus_token', response.data);
 
                 localStorage.setItem('campus_token', response.data);
-                localStorage.removeItem('sell_redirect'); // clear karo
+                localStorage.removeItem('sell_redirect');
 
                 if (sellRedirect) {
-                    navigate('/sell'); // seedha sell page pe bhej do
+                    navigate('/sell');
                 } else {
                     navigate('/dashboard');
                 }
@@ -46,7 +46,7 @@ function Login() {
 
         } catch (err) {
             console.error("Login Error:", err);
-            setError("Kuch toh gadbad hai bhai! Check karo backend chalu hai ya nahi.");
+            setError("Something went wrong!");
         }
     };
 

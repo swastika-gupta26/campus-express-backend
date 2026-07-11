@@ -21,7 +21,7 @@ function Register() {
         setLoading(true);
 
         try {
-            const response = await axios.post('http://localhost:8080/api/auth/register', {
+            const response = await axios.post('https://campus-express-backend-pnkl.onrender.com/api/auth/register', {
                 username: username,
                 password: password,
                 gender: gender,
