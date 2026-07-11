@@ -3,6 +3,8 @@ package com.project.campusExpress.entity;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
+import jakarta.persistence.ConstraintMode;
+import jakarta.persistence.ForeignKey;
 
 @Entity
 @Table(name = "orders")
@@ -27,7 +29,8 @@ public class Order {
     private User user;
 
     @ManyToOne
-    @JoinColumn(name = "product_id", nullable = true)
+    @JoinColumn(name = "product_id", nullable = true,
+            foreignKey = @ForeignKey(value = ConstraintMode.NO_CONSTRAINT))
     private Product product;
 
 
