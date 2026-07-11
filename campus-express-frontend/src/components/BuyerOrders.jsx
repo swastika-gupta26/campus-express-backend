@@ -53,7 +53,7 @@ function BuyerOrders() {
             setCancellingOrderId(null);
             setCancelReason('');
         } catch (err) {
-            setCancelError(err.response?.data || "Failed to cancel order.");
+            setCancelError(err.response?.data?.message || "Failed to cancel order.");
         } finally {
             setCancelling(false);
         }
