@@ -136,8 +136,11 @@ public class OrderController {
             throw new UnauthorizedException("You can only cancel your own orders.");
         }
 
-        if("CANCELLED".equals(order.getStatus())||"DELIVERED".equals(order.getStatus())){
-            throw new BadRequestException("This oder can not be cancelled.");
+        if("DELIVERED".equals(order.getStatus())){
+            throw new BadRequestException( "Cannot cancel an order that is already DELIVERED");
+        }
+        if("CANCELLED".equals(order.getStatus())){
+            throw new BadRequestException( "This item ios already CANCELLED");
         }
         //stock rollback
         Product product=order.getProduct();
