@@ -115,16 +115,18 @@ function BuyerOrders() {
                                     🕐 Ordered: {new Date(order.orderDate).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })}
                                 </p>
                             )}
-                            <button
-                                onClick={() => {
-                                    setCancellingOrderId(order.id);
-                                    setCancelReason('');
-                                    setCancelError('');
-                                }}
-                                className="mt-2 text-xs font-semibold text-red-500 hover:text-red-600"
-                            >
-                                Cancel Order
-                            </button>
+                            {order.status !== 'CANCELLED' && order.status !== 'DELIVERED' && (
+                                <button
+                                    onClick={() => {
+                                        setCancellingOrderId(order.id);
+                                        setCancelReason('');
+                                        setCancelError('');
+                                    }}
+                                    className="mt-2 text-xs font-semibold text-red-500 hover:text-red-600"
+                                >
+                                    Cancel Order
+                                </button>
+                            )}
                         </div>
                     ))}
                 </div>
