@@ -22,19 +22,10 @@ function SellItem() {
         const fetchMyProducts = async () => {
             try {
                 setLoading(true);
-                const profileRes = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/user/my-profile', {
+                const productsRes = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/products/my-listings', {
                     headers: { Authorization: `Bearer ${token}` }
                 });
-                const myUsername = profileRes.data.username;
-
-                const productsRes = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/products', {
-                    headers: { Authorization: `Bearer ${token}` }
-                });
-
-                const mine = productsRes.data.filter(
-                    (p) => p.createdByUsername === myUsername
-                );
-                setMyProducts(mine);
+                setMyProducts(productsRes.data);
             } catch (err) {
                 console.error("Error fetching your listings:", err);
                 setError("Could not load your listings.");
