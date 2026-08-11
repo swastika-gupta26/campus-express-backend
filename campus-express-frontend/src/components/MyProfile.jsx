@@ -125,10 +125,7 @@ function MyProfile() {
 
                     {/* Editable Campus Fields */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                            <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Email </label>
-                            <input type="email" value={profile.email}  onChange={(e) => setProfile({...profile, email: e.target.value})} className="w-full bg-transparent font-medium text-slate-700 outline-none" />
-                        </div>
+
                         <div>
                             <label className="block text-xs font-semibold text-slate-700 mb-1.5">Phone Number</label>
                             <input
