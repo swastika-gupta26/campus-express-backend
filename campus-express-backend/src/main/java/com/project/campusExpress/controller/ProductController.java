@@ -43,6 +43,18 @@ public class ProductController {
                 .map(ProductResponse::from)
                 .collect(Collectors.toList());
     }
+    @GetMapping("/my-listings")
+    public List<ProductResponse> getMyProducts(@RequestHeader("Authorization") String tokenHeader) {
+        String token = tokenHeader.substring(7);
+        String username = jwtservice.extractUsername(token);
+        User currentUser = userRepository.findByUsername(username)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+
+        return productRepository.findByCreatedById(currentUser.getId())
+                .stream()
+                .map(ProductResponse::from)
+                .collect(Collectors.toList());
+    }
 
     @PostMapping
     public ProductResponse createProduct(@RequestBody Product product, @RequestHeader("Authorization") String tokenHeader) {

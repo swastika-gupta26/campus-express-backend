@@ -12,4 +12,5 @@ import java.util.Optional;
 public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findByNameIgnoreCaseAndPriceAndCreatedBy(String name, Double price, User createdBy);
     List<Product> findByCreatedByIdNot(Long userId);
+    List<Product> findByCreatedById(Long userId);
 }
