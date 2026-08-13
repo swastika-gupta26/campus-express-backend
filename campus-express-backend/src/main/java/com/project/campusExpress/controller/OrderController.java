@@ -82,7 +82,7 @@ public class OrderController {
 
         order.setProduct(product);
         order.setUser(user); //updating user_id column in order table
-
+        order.setStatus("PENDING");
         order.setProductSnapshot(product.getName());
         order.setPriceSnapshot(product.getPrice());
         order.setOrderDate(LocalDateTime.now());
