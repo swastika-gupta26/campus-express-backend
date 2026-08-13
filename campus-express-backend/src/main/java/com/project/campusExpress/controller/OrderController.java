@@ -2,12 +2,14 @@ package com.project.campusExpress.controller;
 
 import com.project.campusExpress.dto.request.CancelRequest;
 import com.project.campusExpress.dto.response.OrderResponse;
+import com.project.campusExpress.entity.Notification;
 import com.project.campusExpress.entity.Order;
 import com.project.campusExpress.entity.Product;
 import com.project.campusExpress.entity.User;
 import com.project.campusExpress.exception.BadRequestException;
 import com.project.campusExpress.exception.ResourceNotFoundException;
 import com.project.campusExpress.exception.UnauthorizedException;
+import com.project.campusExpress.repository.NotificationRepository;
 import com.project.campusExpress.repository.OrderRepository;
 import com.project.campusExpress.repository.ProductRepository;
 import com.project.campusExpress.repository.UserRepository;
@@ -36,6 +38,9 @@ public class OrderController {
 
     @Autowired
     private JwtService jwtservice;
+
+    @Autowired
+    private NotificationRepository notificationRepository;
 
     @GetMapping
     public List<OrderResponse> getAllOrders() {
@@ -93,6 +98,9 @@ public class OrderController {
         if ("DELIVERED".equals(newStatus)) {
             order.setDeliveredAt(LocalDateTime.now());
         }
+        String message= "Your order for " + order.getProductSnapshot()+ " is now "+ newStatus+".";
+        Notification notification = new Notification( order.getUser(), message);
+        notificationRepository.save(notification);
 
         return OrderResponse.from(orderRepository.save(order));
     }
