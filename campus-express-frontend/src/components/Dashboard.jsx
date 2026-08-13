@@ -8,7 +8,7 @@ function Dashboard() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
-
+    const [unreadCount, setUnreadCount] = useState(0);
 
     const token = localStorage.getItem('campus_token');
 
@@ -34,6 +34,23 @@ function Dashboard() {
         } else {
             setError("No token found. Please log in first.");
             setLoading(false);
+        }
+    }, [token]);
+
+    useEffect(() => {
+        const fetchUnreadCount = async () => {
+            try {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/notifications', {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
+                const unread = response.data.filter((n) => !n.read).length;
+                setUnreadCount(unread);
+            } catch (err) {
+                console.log("Error fetching notifications:", err);
+            }
+        };
+        if (token) {
+            fetchUnreadCount();
         }
     }, [token]);
 
@@ -124,10 +141,26 @@ function Dashboard() {
                         >
                             Logout
                         </button>
+                        <button
+                            type="button"
+                            onClick={() => window.location.href = '/notifications'}
+                            aria-label="Notifications"
+                            className="relative h-9 w-9 shrink-0 rounded-full bg-orange-50 border border-orange-200 text-orange-600 flex items-center justify-center hover:bg-orange-100 hover:border-orange-300 transition-colors"
+                        >
+                            <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" aria-hidden="true">
+                                <path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
+                                      stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                            {unreadCount > 0 && (
+                                <span className="absolute -top-1 -right-1 h-4 w-4 bg-red-500 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+            {unreadCount > 9 ? '9+' : unreadCount}
+        </span>
+                            )}
+                        </button>
                         {/* Profile icon */}
                         <button
                             type="button"
-                            onClick={() => window.location.href = '/profile'} // 👈 Naye page par bhej dega
+                            onClick={() => window.location.href = '/profile'}
                             aria-label="Profile"
                             className="h-9 w-9 shrink-0 rounded-full bg-orange-50 border border-orange-200 text-orange-600 flex items-center justify-center hover:bg-orange-100 hover:border-orange-300 transition-colors"
                         >

@@ -9,6 +9,7 @@ import BuyProduct from './components/BuyProduct'
 import MyOrders from './components/MyOrders';
 import BuyerOrders from './components/BuyerOrders';
 import OrderHistory from './components/OrderHistory';
+import Notifications from './components/Notifications.jsx';
 function App() {
     return (
         <Router>
@@ -23,6 +24,7 @@ function App() {
                 <Route path="/my-sales" element={<MyOrders />} />
                 <Route path="/my-orders" element={<BuyerOrders />} />
                 <Route path="/order-history" element={<OrderHistory />} />
+                <Route path="/notifications" element={<Notifications />} />
 
             </Routes>
         </Router>

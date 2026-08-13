@@ -63,6 +63,12 @@ function MyProfile() {
 
     const handleSave = async (e) => {
         e.preventDefault();
+
+        if (profile.phoneNo && profile.phoneNo.length !== 10) {
+            setError("Phone number must be exactly 10 digits.");
+            return;
+        }
+
         setSaving(true);
         setError('');
         setSuccess('');
@@ -131,9 +137,17 @@ function MyProfile() {
                             <input
                                 type="tel"
                                 value={profile.phoneNo || ''}
-                                onChange={(e) => setProfile({...profile, phoneNo: e.target.value})}
+                                onChange={(e) => {
+                                    const value = e.target.value.replace(/\D/g, '').slice(0, 10);
+                                    setProfile({...profile, phoneNo: value});
+                                }}
+                                maxLength={10}
                                 className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-orange-400 transition"
+                                placeholder="10-digit number"
                             />
+                            {profile.phoneNo && profile.phoneNo.length !== 10 && (
+                                <p className="text-xs text-red-500 mt-1">Phone number must be exactly 10 digits.</p>
+                            )}
                         </div>
                         <div>
                             <label className="block text-xs font-semibold text-slate-700 mb-1.5">Hostel Name</label>
