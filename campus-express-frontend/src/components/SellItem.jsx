@@ -17,6 +17,7 @@ function SellItem() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState('');
     const [newDescription, setNewDescription] = useState('');
+    const [pendingOrderCount, setPendingOrderCount] = useState(0);
 
     useEffect(() => {
         const fetchMyProducts = async () => {
@@ -34,6 +35,17 @@ function SellItem() {
             }
         };
 
+        const fetchPendingOrderCount = async () => {
+            try {
+                const response = await axios.get('https://campus-express-backend-pnkl.onrender.com/api/orders/pending-count', {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
+                setPendingOrderCount(response.data);
+            } catch (err) {
+                console.error("Error fetching pending order count:", err);
+            }
+        };
+
         const setupProducer = async () => {
             try {
                 const response = await axios.put('https://campus-express-backend-pnkl.onrender.com/api/user/become-producer', {}, {
@@ -48,9 +60,11 @@ function SellItem() {
                 }
 
                 fetchMyProducts();
+                fetchPendingOrderCount();
             } catch (err) {
                 console.error("Could not enable producer role:", err);
                 fetchMyProducts();
+                fetchPendingOrderCount();
             }
         };
 
@@ -138,7 +152,13 @@ function SellItem() {
                         </div>
                         <div className="text-left">
                             <p className="text-sm font-bold text-slate-900">Orders Received</p>
-                            <p className="text-xs text-slate-500">View and manage incoming orders</p>
+                            {pendingOrderCount > 0 ? (
+                                <p className="text-xs font-semibold text-orange-600">
+                                    You have {pendingOrderCount} new order{pendingOrderCount > 1 ? 's' : ''}
+                                </p>
+                            ) : (
+                                <p className="text-xs text-slate-500">View and manage incoming orders</p>
+                            )}
                         </div>
                     </div>
                     <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4 text-orange-400 group-hover:text-orange-600 transition-colors" aria-hidden="true">
