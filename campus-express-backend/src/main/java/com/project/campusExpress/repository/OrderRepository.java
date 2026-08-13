@@ -12,4 +12,5 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     List<Order> findByUserHostelName(String hostelName);
     List<Order> findByProductCreatedBy(User producer);
     List<Order> findByUser(User user);
+    long countByProductCreatedByAndStatus(User producer, String status);
 }

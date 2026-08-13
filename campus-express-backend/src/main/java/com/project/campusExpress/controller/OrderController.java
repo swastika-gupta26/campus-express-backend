@@ -157,4 +157,13 @@ public class OrderController {
 
         return ResponseEntity.ok(OrderResponse.from(order));
     }
+    @GetMapping("/pending-count")
+    public long getPendingOrderCount(@RequestHeader("Authorization") String tokenHeader) {
+        String token = tokenHeader.substring(7);
+        String username = jwtservice.extractUsername(token);
+        User currentUser = userRepository.findByUsername(username)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found"));
+
+        return orderRepository.countByProductCreatedByAndStatus(currentUser, "PENDING");
+    }
 }
