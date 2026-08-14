@@ -209,8 +209,20 @@ function SellItem() {
                             <label className="block text-xs font-semibold text-slate-700 mb-1.5">Price (₹)</label>
                             <input
                                 type="number"
+                                step="0.01"
+                                min="0"
                                 value={newPrice}
-                                onChange={(e) => setNewPrice(e.target.value)}
+                                onChange={(e) => {
+                                    const value = e.target.value;
+                                    if (value === '' || /^\d*\.?\d*$/.test(value)) {
+                                        setNewPrice(value);
+                                    }
+                                }}
+                                onKeyDown={(e) => {
+                                    if (['e', 'E', '+', '-'].includes(e.key)) {
+                                        e.preventDefault();
+                                    }
+                                }}
                                 className="w-full px-3.5 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:border-orange-400 transition"
                                 placeholder="40"
                                 required
