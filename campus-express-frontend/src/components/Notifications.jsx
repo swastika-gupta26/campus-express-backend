@@ -15,6 +15,10 @@ function Notifications() {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setNotifications(response.data);
+
+                await axios.put('https://campus-express-backend-pnkl.onrender.com/api/notifications/mark-all-read', {}, {
+                    headers: { Authorization: `Bearer ${token}` }
+                });
             } catch (err) {
                 console.error("Error fetching notifications:", err);
                 setError("Could not load notifications.");
