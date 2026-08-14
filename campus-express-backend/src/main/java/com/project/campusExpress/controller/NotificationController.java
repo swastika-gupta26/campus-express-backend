@@ -28,12 +28,17 @@ public class NotificationController {
                .orElseThrow(()-> new ResourceNotFoundException("User not found"));
        return notificationRepository.findByUserIdOrderByCreatedAtDesc(currentUser.getId());
    }
-   @PutMapping("/{id}/ read")
-    public Notification markAsRead(@PathVariable Long id){
-       Notification notification = notificationRepository.findById(id)
-               .orElseThrow(() -> new ResourceNotFoundException("Notification not found"));
-       notification.setRead(true);
-       return notificationRepository.save(notification);
+   @PutMapping("/mark-all-read")
+    public String markAllRead(@RequestHeader("Authorization") String tokenHeader){
+       String token= tokenHeader.substring(7);
+       String username= jwtservice.extractUsername(token);
+       User currenUser= userRepository.findByUsername(username)
+               .orElseThrow(()-> new ResourceNotFoundException("User not found"));
+      List<Notification> unread= notificationRepository.findByUserIdAndIsReadFalse(currenUser.getId());
+      unread.forEach(n-> n.setRead(true));
+       notificationRepository.saveAll(unread);
+       return "All notifications marked as read";
+
    }
 
 }
