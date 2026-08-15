@@ -1,88 +1,84 @@
-# Campus Express - Full-Stack Marketplace Application
+# Campus Express
 
-Campus Express is a secure full-stack marketplace application built for hyper-local campus commerce. It enables students to buy and sell products within their university ecosystem with role-based access, inventory management, and order processing.
+A full-stack hyper-local campus marketplace and delivery platform where students can buy and sell products within their university ecosystem.
 
-**Live Demo:** https://campus-express-frontend.vercel.app
-
-## Overview
-
-The application supports three user roles:
-
-* **Consumer** – Browse products and place orders.
-* **Producer** – List and manage products, track inventory, and update order statuses.
-* **Admin** – Manage products and perform administrative operations.
-
-The backend follows a layered architecture using Controller, Service, Repository, and Entity layers. The frontend is built with React and communicates with the backend through REST APIs.
-
-## Tech Stack
-
-**Backend**
-
-* Java 21
-* Spring Boot
-* Spring Security
-* Spring Data JPA (Hibernate)
-* JWT
-* Maven
-
-**Frontend**
-
-* React
-* Axios
-* Tailwind CSS
-
-**Database & Deployment**
-
-* TiDB Cloud (MySQL-compatible)
-* Render (Dockerized Backend)
-* Vercel (Frontend)
+Live Demo: https://campus-express-frontend.vercel.app
 
 ## Features
 
-### Authentication & Authorization
+* JWT Authentication & Role-Based Access Control (Consumer, Producer, Admin)
+* Marketplace for browsing and purchasing campus products
+* Product creation, update, deletion, and inventory management
+* Real-time stock validation with automatic stock updates and rollback on cancellation
+* Order creation, status updates, and cancellation
+* Notifications for order status changes with unread tracking
+* Profile management with input validation
+* Product snapshots preserved in orders even after product updates or deletion
+* Transaction-safe order and inventory operations using `@Transactional`
+* Centralized exception handling using `@ControllerAdvice`
 
-* JWT-based stateless authentication.
-* Spring Security with Role-Based Access Control (RBAC).
-* Supports Consumer, Producer, and Admin roles.
+## Tech Stack
 
-### Product & Inventory
+| Layer       | Technologies                                                           |
+| ----------- | ---------------------------------------------------------------------- |
+| Backend     | Java 21, Spring Boot, Spring Security, Spring Data JPA, Hibernate, JWT |
+| Frontend    | React, Axios, Tailwind CSS                                             |
+| Database    | MySQL-compatible TiDB Cloud Serverless                                 |
+| Deployment  | Render, Docker, Vercel                                                 |
+| API Testing | Postman                                                                |
 
-* Producers can create, update, and delete their products.
-* Stock validation and automatic inventory updates during orders.
-* Users do not see their own listings in the marketplace feed.
+## Architecture
 
-### Order Management
-
-* Consumers can place and cancel orders.
-* Producers can view and update incoming order statuses.
-* Product name and price are preserved in orders at the time of purchase.
-
-### Database & Transactions
-
-* JPA relationships using `@OneToMany` and `@ManyToOne`.
-* `@Transactional` ensures atomic order creation and stock updates.
-* Centralized exception handling using `@ControllerAdvice`.
-
-## Deployment Architecture
-
-
+```text
 React (Vercel)
       ↓
-Spring Boot API (Render)
+Spring Boot REST API (Render + Docker)
       ↓
-TiDB Cloud
+TiDB Cloud Serverless
+```
 
+The backend follows a layered architecture:
 
-Sensitive configuration such as database credentials and JWT secrets is managed using environment variables.
+```text
+Controller → Service → Repository → Entity
+```
+
+Sensitive configuration such as database credentials and JWT secrets is managed through environment variables.
+
+## Database
+
+The application uses JPA/Hibernate to model relationships between:
+
+* User ↔ Product
+* User ↔ Order
+* Product ↔ Order
+* User ↔ Notification
+
+Historical orders remain intact even when their associated products are deleted.
 
 ## API Testing
 
-APIs were tested using Postman, including authentication, product management, inventory validation, order processing, RBAC, and error handling.
+APIs were tested using Postman, covering:
 
-## How to Run Locally
+* Authentication
+* Product and inventory operations
+* Order creation, status updates, and cancellation
+* Notifications
+* Role-based authorization
+* Validation and error handling
 
-1. Clone the repository.
-2. Configure database and JWT credentials using environment variables.
-3. Start the Spring Boot backend.
-4. Start the React frontend.
-5. Use Postman or the frontend to interact with the API.
+## Deployment
+
+* Frontend: Vercel
+* Backend: Dockerized Spring Boot service on Render
+* Database: TiDB Cloud Serverless
+* Configuration: Environment variables for secrets and deployment-specific settings
+
+## Project Highlights
+
+* Secure REST APIs using Spring Security and JWT
+* Role-based authorization
+* Relational database design using JPA/Hibernate
+* Transaction-safe business workflows
+* React and Spring Boot integration
+* Production deployment with CORS, environment configuration, and SSL setup
