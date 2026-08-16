@@ -10,6 +10,7 @@ import MyOrders from './components/MyOrders';
 import BuyerOrders from './components/BuyerOrders';
 import OrderHistory from './components/OrderHistory';
 import Notifications from './components/Notifications.jsx';
+import AdminPanel from "./components/AdminPanel.jsx";
 function App() {
     return (
         <Router>
@@ -25,7 +26,7 @@ function App() {
                 <Route path="/my-orders" element={<BuyerOrders />} />
                 <Route path="/order-history" element={<OrderHistory />} />
                 <Route path="/notifications" element={<Notifications />} />
-
+                <Route path="/admin" element={<AdminPanel />} />
             </Routes>
         </Router>
     );

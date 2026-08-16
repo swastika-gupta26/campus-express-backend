@@ -101,4 +101,11 @@ public class ProductController {
         }
         throw new UnauthorizedException("You don't have access to delete products.");
     }
+    @GetMapping("/all")
+    public List<ProductResponse> getAllProductsForAdmin() {
+        return productRepository.findAll()
+                .stream()
+                .map(ProductResponse::from)
+                .collect(Collectors.toList());
+    }
 }
